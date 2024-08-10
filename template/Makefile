@@ -24,7 +24,11 @@ UNTAGGED_VERSION := v0.1.0
 UNTAGGED_COMMIT := 0000000000
 
 SHELL := /bin/bash
+RUN_ARGS := --help
 LOG_LEVEL := debug
+
+GO_ENJIN_PKG := nil
+BE_LOCAL_PATH := nil
 
 CLEAN_FILES     ?= ${BIN_NAME} ${BIN_NAME}.*.* coverage.out pprof.*
 DISTCLEAN_FILES ?=
@@ -35,6 +39,4 @@ BUILD_RELEASE_VAR := main.BuildRelease
 
 SRC_CMD_PATH := ./cmd/tmplcmdname
 
-include Golang.cmd.mk
-include Golang.def.mk
-
+include Golang.mk
